@@ -2,9 +2,36 @@
 toc: true
 comments: true
 layout: post
-title: How to give your Github Pages blog a custom domain
-description: Configuring AWS Route 53 Domain to Point to Github Pages
+title: Getting Started with Github Pages
+description: Setting up Github Pages and how to give your Github Pages blog a custom domain
+author: Lily Wu
 ---
+
+<br>
+
+# Setting up Github Pages
+
+# Overview 
+
+You will want to create a Github Pages blog for this class. This is a place where you can code, complete the hacks and submit them through a review ticket, and record what you have learned. 
+<br>
+
+# Setup
+
+1. Fork the [student repository](https://github.com/nighthawkcoders/student) by clicking on "Fork". 
+    ![]({{ site.baseurl }}/images/fork.jpg)
+
+    This will direct you to a page where you can give a name and description for your repository. Keep "Copy the main branch only" checked and then click on "Create fork". 
+
+2. Once your repository is created, click on the green "Code" button and copy the HTTPS link provided.
+
+3. In WSL, go to your vscode directory (`cd ~/vscode`). Then clone the repository with `git clone <link copied from step 3>`.
+
+4. Open your repository in VS Code with `code <repository name>`. Now you can start code, code, coding!
+
+<br>
+
+# Give Github Pages a custom domain
 
 # Overview
 
@@ -80,3 +107,6 @@ This issue may occur if you had accessed the custom domain in your browser befor
 I tried refreshing the page multiple times, but the message persisted. Even after twelve hours, the message was still there. I then opened up the "Network" tab in Chrome Dev Tools, and reloaded the page. For some reason, the Nginx message changed to my Github Pages.
 
 I'm not sure if this solution always works, so a backup method is to open up another browser and paste the custom domain into the search bar. This issue probably has something to do with the browser's cache. 
+
+
+<!-- Configuring AWS Route 53 Domain to Point to Github Pages-->
