@@ -31,6 +31,21 @@ You will want to create a Github Pages blog for this class. This is a place wher
 
 <br>
 
+# Running Github Pages locally
+
+To see your blog update locally as you edit, follow the steps below:
+
+1. Open your terminal in VS Code with <code>Ctrl + `</code>
+
+2. Type `bundle install`
+
+3. Type `make`. Then, go to the link provided in the output:
+    ![]({{ site.baseurl }}/images/output.jpg)
+
+Now, whenever the blog is edited in VS Code, the local website will show the changes upon refresh. 
+
+<br>
+
 # Give Github Pages a custom domain
 
 # Overview
@@ -106,7 +121,7 @@ This issue may occur if you had accessed the custom domain in your browser befor
 
 I tried refreshing the page multiple times, but the message persisted. Even after twelve hours, the message was still there. I then opened up the "Network" tab in Chrome Dev Tools, and reloaded the page. For some reason, the Nginx message changed to my Github Pages.
 
-I'm not sure if this solution always works, so a backup method is to open up another browser and paste the custom domain into the search bar. This issue probably has something to do with the browser's cache. 
+I'm not sure if this solution always works, so a backup method is to open up another browser and paste the custom domain into the search bar.  
 
 
 <!-- Configuring AWS Route 53 Domain to Point to Github Pages-->
