@@ -157,6 +157,45 @@ This ensures that Github Pages is formatted correctly. This is because originall
 
 ## Troubleshooting
 
+### `dig`
+
+`dig` is a Linux command that outputs DNS information, which can be used for troubleshooting.
+
+Run `dig <your subdomain>` to check that the subdomain and the Github URL it points to is properly configured.
+
+```bash
+dig lily.nighthawkcodingsociety.com A
+
+; <<>> DiG 9.16.1-Ubuntu <<>> lily.nighthawkcodingsociety.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14554
+;; flags: qr rd ad; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;lily.nighthawkcodingsociety.com. IN    A
+
+;; ANSWER SECTION:
+lily.nighthawkcodingsociety.com. 0 IN   CNAME   lwu1822.github.io.
+lwu1822.github.io.      0       IN      A       185.199.111.153
+lwu1822.github.io.      0       IN      A       185.199.108.153
+lwu1822.github.io.      0       IN      A       185.199.109.153
+lwu1822.github.io.      0       IN      A       185.199.110.153
+
+;; Query time: 0 msec
+;; SERVER: 172.30.208.1#53(172.30.208.1)
+;; WHEN: Thu Jun 15 22:45:36 PDT 2023
+;; MSG SIZE  rcvd: 192
+```
+
+In the `ANSWER SECTION`, check to see that the CNAME line maps the subdomain to the Github URL. 
+
+The four IP addresses below the CNAME line are the IP addresses for Github Pages. 
+
+
+
+
 ### Accessing the custom domain name returns a default Nginx page
 
 While accessing the custom domain for the first time, you may encounter the default Nginx message or the default page for whatever web server was used instead of Github Pages:
