@@ -9,6 +9,27 @@ author: Lily Wu
 
 <br>
 
+# WSL
+
+WSL provides a Linux environment on a Windows computer. Linux is an open source operating system that consists of many distributions, such as Ubuntu. Linux provides a terminal where you will be running commands to code and push your code to Github.
+
+To get started, download WSL and Ubuntu:
+
+1. Open PowerShell as an administrator (Right click -> Run as administrator) and type `wsl --install`
+
+2. After the installation finishes, restart your computer 
+
+3. After restarting, a command prompt or PowerShell prompt may automatically open asking for a username. Enter a username and password to create your account. 
+  
+  If no prompt opens, open up PowerShell as an administrator and run `wsl --install -d Ubuntu`
+
+4. Open Command Prompt or PowerShell as **a regular user** (just click on Command Prompt or PowerShell), and type `wsl`. The terminal's prompt should change from `C:\Users\<username>` to `<username>@MSI:`
+
+<br>
+
+Take a look at some [Linux navigation commands](https://www.pluralsight.com/guides/beginner-linux-navigation-manual). Learning how to move around in the terminal will be very helpful.
+
+
 # Setting up Github Pages
 
 # Overview 
