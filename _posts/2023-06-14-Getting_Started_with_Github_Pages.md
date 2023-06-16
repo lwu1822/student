@@ -13,7 +13,7 @@ author: Lily Wu
 
 WSL provides a Linux environment on a Windows computer. Linux is an open source operating system that consists of many distributions, such as Ubuntu. Linux provides a terminal where you will be running commands to code and push your code to Github.
 
-To get started, download WSL and Ubuntu:
+To get started, download WSL and Ubuntu (skip the following steps if you are using a Mac):
 
 1. Open PowerShell as an administrator (Right click -> Run as administrator) and type `wsl --install`
 
@@ -50,16 +50,27 @@ VS Code provides a place to create and edit code. Follow the steps below to down
 
 2. Move to your home directory with `cd ~`
 
-3. Create and move into a vscode directory with:
+3. Run the following commands to configure git:
+
+```bash
+git config --global user.email <your email>
+git config --global user.name <your github id>
+```
+
+4. Create and move into a vscode directory with:
 
 ```bash
 mkdir vscode
 cd vscode
 ```
 
-4. Clone a repository, for example: `git clone https://github.com/nighthawkcoders/teacher.git`
+5. Clone a repository, for example: `git clone https://github.com/nighthawkcoders/teacher.git`
 
-5. Open the repository in VS Code with `code <repository name>` (ex: `code teacher`).
+6. Open the repository in VS Code with `code <repository name>` (ex: `code teacher`).
+
+7. Check that VS Code is opened in WSL at the bottom left corner of the window:
+
+    ![]({{ site.baseurl }}/images/wsl.jpg)
 
 <br>
 
