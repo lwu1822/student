@@ -39,21 +39,27 @@ You can run your Github Pages blog locally. This means that when you will be abl
 
 You can also view the steps in the student repository's [README](https://github.com/nighthawkcoders/student/blob/main/README.md)
 
-If using WSL:
+If using Windows, run the following commands in WSL (check out the comments if you're interested in what the commands do):
 
 ```bash
-# ruby
+# install Ruby 
+# apt install installs packages for Ubuntu
 sudo apt install ruby-full build-essential zlib1g-dev
 # avoid root user, set up a gem installation directory for your user account
+# the following "echo" commands adds the installation directory into the .bashrc file
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+# run the .bashrc file so that WSL knows the installation directory
 source ~/.bashrc
 # install jekyll and bundler
 gem install jekyll bundler
 ```
 
-If using MacOS:
+
+<br>
+
+If using MacOS, run the following commands in the terminal:
 
 ```bash
 # ruby
@@ -71,11 +77,13 @@ gem install jekyll
 ```
 
 
-1. Open your terminal in VS Code through View -> Terminal. Alternatively, the shortcut <code>Ctrl + `</code> can be used.
+1. Open your terminal in VS Code through View -> Terminal. Alternatively, the shortcut <code>Ctrl + `</code> can be used. (You can also run the commands in WSL, but opening up VS Code's terminal in your student repository ensures you are in the correct directory.)
 
-2. Type `bundle install`
+2. Type `bundle install`. This command installs the dependencies in your Gemfile.
 
-3. Type `make`. Then, go to the link provided in the output:
+3. Type `make`. This compiles the program.
+
+4. Go to the localhost link provided in the output:
     ![]({{ site.baseurl }}/images/output.jpg)
 
 Now, whenever the blog is edited in VS Code, the local website will show the changes upon refresh. 
