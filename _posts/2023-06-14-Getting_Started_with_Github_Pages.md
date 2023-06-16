@@ -21,13 +21,47 @@ To get started, download WSL and Ubuntu:
 
 3. After restarting, a command prompt or PowerShell prompt may automatically open asking for a username. Enter a username and password to create your account. 
   
-  If no prompt opens, open up PowerShell as an administrator and run `wsl --install -d Ubuntu`
+    If no prompt opens, open up PowerShell as an administrator and run `wsl --install -d Ubuntu`
 
 4. Open Command Prompt or PowerShell as **a regular user** (just click on Command Prompt or PowerShell), and type `wsl`. The terminal's prompt should change from `C:\Users\<username>` to `<username>@MSI:`
 
 <br>
 
-Take a look at some [Linux navigation commands](https://www.pluralsight.com/guides/beginner-linux-navigation-manual). Learning how to move around in the terminal will be very helpful.
+Take a look at some [Linux navigation commands](https://www.pluralsight.com/guides/beginner-linux-navigation-manual). Learning how to move around in the terminal will be very helpful while coding in the future.
+
+<br>
+
+# Visual Studio Code
+
+VS Code provides a place to create and edit code. Follow the steps below to download VS Code onto your computer. 
+
+# Setup
+
+1. Install [VS Code](https://code.visualstudio.com/)
+
+2. When the installer asks to Select Additional Tasks, check "Add to PATH".
+
+3. Open VS Code. In the sidebar, click on "Extensions". Search for "Remote Development extension pack" and install it. 
+<br>
+
+# Opening VS Code in WSL
+
+1. Open Command Prompt/PowerShell and type `wsl` if you're not in WSL already.
+
+2. Move to your home directory with `cd ~`
+
+3. Create and move into a vscode directory with:
+
+```bash
+mkdir vscode
+cd vscode
+```
+
+4. Clone a repository, for example: `git clone https://github.com/nighthawkcoders/teacher.git`
+
+5. Open the repository in VS Code with `code <repository name>` (ex: `code teacher`).
+
+<br>
 
 
 # Setting up Github Pages
